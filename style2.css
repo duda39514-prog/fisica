@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+font-family:'Chelvor';
+    src: url(Chelvor-Regular-Exfont8541.otf) format('Truetype');
+}
+
+body {
+    background-image: url('Aurora\ Iridescente\ em\ Fluxo.png');
+    background-size: 100%;
+    
+}
+
+.cima {
+    background-color: rgb(0,0,0,0.6);
+    margin: 60px 120px;
+    padding: 14px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    gap: 400px;
+     align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px
+}
+
+nav ul li a {
+    color: rgb(223, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(39, 114, 179);
+    cursor: pionter;
+}
+
+.opcoes {
+    color:white;
+    font-family: 'Century Gothic', Courier, monospace;
+    justify-content: space-between;
+    border-radius: 40px;
+}
+
+.part {
+    background-color: rgba(0,0,0,0.7);
+    margin: 60px 120px;
+    padding: 35px;
+    border: 1px solid white;
+    border-radius: 40px;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.texto {
+    width: 55%;
+}
+
+.texto h1 {
+    color: white;
+    font-family: 'Chelvor', serif;
+    font-size: 85px;
+    font-weight: normal;
+    margin: 0 0 25px 0;
+}
+
+.texto p {
+    color: white;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+    margin: 0;
+}
+
+.conteudo img {
+    width: 420px;
+    height: auto;
+    object-fit: contain;
+}
