@@ -12,12 +12,14 @@ font-family:'Chelvor';
 body {
     background-image: url('Aurora\ Iridescente\ em\ Fluxo.png');
     background-size: 100%;
+    background-size: cover;
     
 }
 
 .cima {
+    max-width: 1200px;
     background-color: rgb(0,0,0,0.6);
-    margin: 60px 120px;
+    margin: 60px auto;
     padding: 18px 24px;
     border: 2px solid white;
     border-radius: 20px;
@@ -43,9 +45,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    border-radius: 100px;
-    box-shadow: 0 0 25px rgba(214, 236, 255, 0.975), 
-                0 0 45px rgba(255, 8, 68, 0.4);
     color: rgb(39, 114, 179);
     cursor: pionter;
 }
@@ -61,8 +60,9 @@ nav ul li a:hover {
 }
 
 .part {
+    max-width: 1200px;
     background-color: rgba(0,0,0,0.7);
-    margin: 60px 120px;
+    margin: 60px auto;
     padding: 45px;
     border: 1px solid white;
     border-radius: 40px;
@@ -115,9 +115,10 @@ nav ul li a:hover {
 
 /* 2. Posicionamento do botão em cima da borda inferior */
   .botao-borda {
+  position: fixed;
   position: absolute;
-  bottom: 90px;                     /* Cola na parte inferior do cartão */
-  left: 200px;                     /* Move para o meio da largura */
+  bottom: 5px;                     /* Cola na parte inferior do cartão */
+  left: 130px;                     /* Move para o meio da largura */
 
   background-color: #121518;
   color: #ffffff;
@@ -168,28 +169,25 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
-/* Estilo e animação contínua (flutuando suavemente) */
 .cientista-icone {
-  font-size: 80px; /* Tamanho grande do ícone */
+  font-size: 80px;
   cursor: pointer;
   display: inline-block;
   user-select: none;
-  /* Animação suave de flutuação constante */
+
   animation: flutuar 3s ease-in-out infinite;
   transition: transform 0.2s ease, filter 0.3s ease;
 }
 
-/* Efeito ao passar o rato (Hover) */
 .cientista-icone:hover {
   filter: drop-shadow(0 0 15px rgba(79, 172, 254, 0.8));
 }
 
-/* Animação de reação ao clique (disparada via JavaScript) */
 .cientista-icone.clicado {
   animation: giro-clique 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards !important;
 }
 
-/* Keyframes: Flutuação contínua */
+
 @keyframes flutuar {
   0% {
     transform: translateY(0px) rotate(0deg);
@@ -202,7 +200,7 @@ nav ul li a:hover {
   }
 }
 
-/* Keyframes: Animação especial ao clicar */
+
 @keyframes giro-clique {
   0% {
     transform: scale(1) rotate(0deg);
@@ -213,4 +211,8 @@ nav ul li a:hover {
   100% {
     transform: scale(0.8) rotate(-360deg);
   }
+}
+
+.out2 {
+    background-image: url('fundo2.jpg.crdownload');
 }
