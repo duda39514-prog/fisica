@@ -592,3 +592,14 @@ position: absolute;          /* Posiciona com base no cartão pai */
   /* Sombra leve inicial */
   box-shadow: 0 0 10px rgba(0, 191, 255, 0.15);
 }
+
+.botao4:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #00d2ff;
+  color: #ffffff;
+  transform: translateY(-2px); /* Efeito de elevação leve */
+  
+  /* Glow com tom cibernético/espectro de luz */
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.6),
+              0 0 30px rgba(138, 43, 226, 0.3);
+}
