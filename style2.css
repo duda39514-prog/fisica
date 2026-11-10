@@ -567,3 +567,28 @@ position: absolute;          /* Posiciona com base no cartão pai */
   border-radius: 20px;
   border: 2px solid white;
 }
+
+.botao4 {
+ width: 200px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.05); /* Fundo sutilmente translúcido */
+  color: #ffffff;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  
+  padding: 10px 28px;
+  border-radius: 50px; /* Formato pílula elegante */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  
+  cursor: pointer;
+  outline: none;
+  width: fit-content; /* Garante que o botão se ajusta ao texto sem esticar */
+  
+  /* Transição suave para todas as interações */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  /* Sombra leve inicial */
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.15);
+}
