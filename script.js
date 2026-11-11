@@ -11,7 +11,6 @@ const dadosCores = {
   function mudarCor(corKey) {
     const c = dadosCores[corKey];
 
-    // Atualiza os conteúdos de texto
     document.getElementById('nome-cor').innerText = c.nome;
     document.getElementById('tag-onda').innerText = c.onda;
     document.getElementById('freq-val').innerText = c.freq;

@@ -1,0 +1,550 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #100b38;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+:root {
+    --blue: #0879d9;
+    --purple: #21145d;
+    --light-blue: #63d8ff;
+    --white: #f5f3ff;
+}
+
+section {
+    padding: 75px 8%;
+    position: relative;
+}
+
+h1, h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #d1d1e9;
+}
+
+/* MENU */
+
+.navbar {
+    position: absolute;
+    top: 25px;
+    left: 5%;
+    width: 90%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px;
+    border: 1px solid rgba(255,255,255,.8);
+    background: rgba(9, 14, 62, .55);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    transition: .3s;
+}
+
+.navbar nav a:hover {
+    color: var(--light-blue);
+}
+
+.menu {
+    font-size: 20px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(ellipse at 80% 40%, #086eb4 0%, transparent 45%),
+        radial-gradient(ellipse at 20% 90%, #44247e 0%, transparent 45%),
+        linear-gradient(140deg, #080b35, #071d56, #100b38);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+    background-size: 55px 55px;
+    opacity: .25;
+}
+
+.hero-content {
+    width: 55%;
+    position: relative;
+    z-index: 2;
+}
+
+.tag, .section-label {
+    color: #70dfff;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 68px);
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.hero-content p {
+    max-width: 390px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #21177c;
+    border: 1px solid #a8a3ff;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #0879d9;
+    box-shadow: 0 0 25px #168bff;
+}
+
+.hero-image {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 48%;
+    height: 65%;
+    border-radius: 45% 0 0 45%;
+    overflow: hidden;
+    opacity: .85;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, transparent, black 30%);
+}
+
+.orbit-circle {
+    position: absolute;
+    right: 20%;
+    top: 25%;
+    width: 150px;
+    height: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(11, 22, 74, .3);
+    box-shadow: 0 0 30px #51caff;
+}
+
+.orbit-circle span {
+    font-size: 35px;
+}
+
+.orbit-circle small {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 9px;
+}
+
+.year {
+    position: absolute;
+    bottom: 30px;
+    right: 8%;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #a8dfff;
+}
+
+/* CIENTISTA */
+
+.scientist {
+    background:
+        linear-gradient(120deg, rgba(17, 20, 85, .96), rgba(30, 12, 74, .96));
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 35px;
+    width: 90%;
+    margin: -25px auto 70px;
+    padding: 50px;
+    z-index: 2;
+}
+
+.scientist-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 35px;
+}
+
+.portrait {
+    width: 40%;
+    height: 330px;
+    overflow: hidden;
+    border: 1px solid #7bceff;
+    box-shadow: 0 0 30px rgba(38, 144, 255, .25);
+}
+
+.portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    filter: contrast(1.05);
+}
+
+.scientist-text {
+    flex: 1;
+}
+
+.scientist-text h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    display: block;
+    font-size: 10px;
+    color: #70dfff;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.scientist-text p {
+    margin-bottom: 15px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #78dfff;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* ESPECTRO */
+
+.spectrum {
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, #222c82, transparent 70%);
+}
+
+.spectrum h2, .facts h2 {
+    font-size: clamp(27px, 4vw, 45px);
+    margin: 25px 0;
+}
+
+.section-description {
+    max-width: 570px;
+    margin: 0 auto;
+}
+
+.rainbow {
+    max-width: 700px;
+    height: 180px;
+    margin: 60px auto 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.rainbow-light {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(
+        90deg,
+        #ff3030,
+        #ff8c00,
+        #ffe600,
+        #00df67,
+        #008cff,
+        #6e36ff
+    );
+
+    filter: blur(30px);
+    opacity: .8;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: left;
+}
+
+.color-card {
+    padding: 25px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.color-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,.12);
+}
+
+.color-card span {
+    font-size: 10px;
+    color: #aaa;
+}
+
+.color-card h3 {
+    font-size: 14px;
+    margin: 15px 0 5px;
+}
+
+.color-card p {
+    font-size: 11px;
+}
+
+.red { border-top: 3px solid #ff3434; }
+.orange { border-top: 3px solid #ff8a28; }
+.yellow { border-top: 3px solid #ffe74b; }
+.green { border-top: 3px solid #25d66c; }
+.blue { border-top: 3px solid #278dff; }
+.violet { border-top: 3px solid #a15bff; }
+
+/* DESCOBERTA */
+
+.discovery {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    background: #17104a;
+}
+
+.discovery-image {
+    width: 50%;
+    height: 320px;
+    overflow: hidden;
+    border: 1px solid #5ecbff;
+    border-radius: 4px;
+}
+
+.discovery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discovery-content {
+    flex: 1;
+}
+
+.discovery-content h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin: 25px 0;
+}
+
+.discovery-content p {
+    margin-bottom: 15px;
+}
+
+/* CURIOSIDADES */
+
+.facts {
+    text-align: center;
+    background:
+        radial-gradient(ellipse at 50% 100%, #29216f, transparent 65%);
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 45px;
+}
+
+.facts-grid article {
+    padding: 35px 25px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 15px;
+    background: rgba(13, 20, 75, .65);
+    text-align: left;
+    transition: .3s;
+}
+
+.facts-grid article:hover {
+    border-color: #66d7ff;
+    box-shadow: 0 0 25px rgba(54, 157, 255, .2);
+}
+
+.facts-grid span {
+    color: #70dfff;
+    font-size: 11px;
+}
+
+.facts-grid h3 {
+    font-family: 'Cinzel', serif;
+    margin: 25px 0 15px;
+    font-size: 17px;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 50px 20px;
+    text-align: center;
+    background: #080625;
+    border-top: 1px solid rgba(255,255,255,.2);
+}
+
+.footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #70dfff;
+}
+
+footer p {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+footer small {
+    font-size: 9px;
+    color: #8585aa;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 55px 7%;
+    }
+
+    .navbar {
+        top: 15px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 650px;
+        align-items: flex-start;
+        padding-top: 160px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 40%;
+        opacity: .45;
+    }
+
+    .orbit-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .scientist {
+        width: 92%;
+        padding: 30px 22px;
+    }
+
+    .scientist-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .portrait {
+        width: 100%;
+        height: 280px;
+    }
+
+    .color-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .discovery {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .discovery-image {
+        width: 100%;
+        height: 230px;
+    }
+
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .color-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+}
