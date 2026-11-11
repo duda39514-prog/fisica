@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História do Espectro Visível</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Chelvor';
+            src: url('Chelvor-Regular-Exfont8541.otf') format('opentype');
+            font-display: swap;
+        }
+
+        body {
+            background: #050608 url('Aurora Iridescente em Fluxo.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        .part {
+            max-width: 1150px;
+            width: 100%;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.78);
+            backdrop-filter: blur(15px);
+            padding: 55px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .titulo {
+            font-family: 'Chelvor', serif;
+            font-size: 65px;
+            font-weight: normal;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .introducao {
+            font-size: 20px;
+            line-height: 1.7;
+            text-align: center;
+            color: rgba(255,255,255,0.85);
+            max-width: 900px;
+            margin: 0 auto 45px;
+        }
+
+        .conteudo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .bloco-texto {
+            width: 60%;
+        }
+
+        .bloco-texto h2 {
+            font-family: 'Chelvor', serif;
+            font-size: 38px;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+
+        .bloco-texto p {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 20px;
+        }
+
+        .bloco-imagem {
+            width: 38%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bloco-imagem img {
+            width: 300px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 25px rgba(79,172,254,0.4));
+        }
+
+        .linha {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(
+                to right,
+                transparent,
+                #4facfe,
+                #ff0844,
+                #ffb199,
+                transparent
+            );
+            margin: 45px 0;
+        }
+
+        .etapas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .evento {
+            background-image: url('fundo6.jpg');
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.15);
+            transition: 0.3s;
+        }
+
+        .evento:hover {
+            background: rgba(255,255,255,0.11);
+            transform: translateY(-5px);
+        }
+
+        .evento h3 {
+            font-family: 'Chelvor', serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 12px;
+            color: #a9dfff;
+        }
+
+        .evento p {
+            font-size: 17px;
+            line-height: 1.7;
+            text-align: justify;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .conclusao {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .conclusao h2 {
+            font-family: 'Chelvor', serif;
+            font-size: 38px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .conclusao p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.85);
+        }
+
+        @media (max-width: 900px) {
+            .part {
+                padding: 30px 22px;
+            }
+
+            .titulo {
+                font-size: 45px;
+            }
+
+            .conteudo {
+                flex-direction: column;
+            }
+
+            .bloco-texto,
+            .bloco-imagem {
+                width: 100%;
+            }
+
+            .bloco-imagem img {
+                max-width: 80%;
+            }
+
+            .etapas {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="part">
+
+        <h1 class="titulo">A História do Espectro Visível</h1>
+
+        <p class="introducao" style="font-family: 'Times New Roman', Times, serif;">
+            Muito antes de compreendermos a luz como conhecemos hoje,
+            as cores já despertavam a curiosidade de cientistas.
+            Ao longo dos séculos, diferentes descobertas revelaram
+            como a luz branca pode se transformar em um conjunto
+            de cores que formam o espectro visível.
+        </p>
+
+        <div class="conteudo">
+
+            <div class="bloco-texto">
+
+                <h2>O início das descobertas</h2>
+
+                <p>
+                    Durante muito tempo, acreditava-se que as cores
+                    surgiam de diferentes maneiras. Essa ideia começou
+                    a mudar no século XVII, quando o cientista inglês
+                    Isaac Newton realizou experimentos com a luz solar
+                    e um prisma de vidro.
+                </p>
+
+                <p>
+                    Em 1666, Newton demonstrou que a luz branca não era
+                    simplesmente incolor: ela era formada por várias
+                    cores. Ao atravessar um prisma, a luz se separava
+                    em diferentes tonalidades, revelando o espectro
+                    visível.
+                </p>
+
+                <p>
+                    Essa experiência foi fundamental para a compreensão
+                    de que as cores estão presentes na própria luz,
+                    e não são criadas pelo prisma.
+                </p>
+
+            </div>
+
+            <div class="bloco-imagem">
+                <img src="isaac.webp">
+            </div>
+
+        </div>
+
+        <div class="linha"></div>
+
+        <h2 style="font-family: 'Chelvor'; font-size: 42px; font-weight: normal; text-align: center; margin-bottom: 30px;">
+            Uma linha do tempo de descobertas
+        </h2>
+
+        <div class="etapas">
+
+            <div class="evento">
+                <h3>1666 — Isaac Newton</h3>
+                <p>
+                    Newton realizou experimentos com prismas e demonstrou
+                    que a luz branca podia ser dividida em diferentes
+                    cores. Seu trabalho foi um dos principais marcos
+                    no estudo do espectro visível.
+                </p>
+            </div>
+
+            <div class="evento">
+                <h3>1672 — Publicação de Newton</h3>
+                <p>
+                    Newton apresentou à comunidade científica suas
+                    pesquisas sobre a natureza da luz e das cores,
+                    contribuindo para transformar a óptica em uma
+                    área de estudo mais desenvolvida.
+                </p>
+            </div>
+
+            <div class="evento">
+                <h3>1802 — William Wollaston</h3>
+                <p>
+                    O cientista observou linhas escuras no espectro
+                    solar, percebendo que a luz do Sol apresentava
+                    características que não eram explicadas apenas
+                    pela separação das cores.
+                </p>
+            </div>
+
+            <div class="evento">
+                <h3>1814 — Joseph von Fraunhofer</h3>
+                <p>
+                    Fraunhofer estudou detalhadamente as linhas escuras
+                    do espectro solar. Essas marcas ficaram conhecidas
+                    como linhas de Fraunhofer e ajudaram no desenvolvimento
+                    da espectroscopia.
+                </p>
+            </div>
+
+            <div class="evento">
+                <h3>Século XIX — Novas descobertas</h3>
+                <p>
+                    Novos estudos sobre a luz permitiram compreender
+                    melhor sua natureza e suas propriedades, relacionando
+                    as cores à frequência e ao comprimento de onda.
+                </p>
+            </div>
+
+            <div class="evento">
+                <h3>Atualmente — A ciência da luz</h3>
+                <p>
+                    Hoje sabemos que o espectro visível corresponde
+                    à pequena faixa do espectro eletromagnético que
+                    pode ser percebida pelos olhos humanos, aproximadamente
+                    entre 380 e 750 nanômetros.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="linha"></div>
+
+        <div class="conclusao">
+
+            <h2>O legado dessas descobertas</h2>
+
+            <p>
+                Os estudos sobre o espectro visível transformaram
+                nossa compreensão da luz e das cores. O que começou
+                com simples experimentos utilizando prismas tornou-se
+                uma das bases da física moderna, contribuindo para
+                avanços na astronomia, na fotografia, na tecnologia
+                e em diversas áreas da ciência.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isaac Newton - O Estudo da Luz</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Chelvor';
+    src: url('Chelvor-Regular-Exfont8541.otf') format('opentype');
+}
+
+body {
+    background: #08090e url('Aurora Iridescente em Fluxo.png') center/cover fixed;
+    color: white;
+    font-family: 'Times New Roman', serif;
+    min-height: 100vh;
+    padding: 35px 20px;
+}
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    background: rgba(0,0,0,0.82);
+    backdrop-filter: blur(15px);
+    border: 1px solid #ffffff30;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 0 40px #1598c522;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff30;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-family: 'Chelvor';
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.status {
+    color: #8ceaff;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin-top: 45px;
+}
+
+.newton {
+    width: 42%;
+    display: flex;
+    justify-content: center;
+}
+
+.newton img {
+    width: 100%;
+    max-width: 390px;
+    max-height: 470px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px #6dcfff50);
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.texto {
+    width: 58%;
+}
+
+.texto h2 {
+    font-family: 'Chelvor';
+    font-size: 55px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.texto p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.dialogo {
+    margin-top: 25px;
+    padding: 22px;
+    border: 1px solid #54caff70;
+    background: rgba(40,130,180,0.10);
+    border-radius: 18px;
+    min-height: 150px;
+}
+
+.dialogo h3 {
+    color: #7bdfff;
+    margin-bottom: 12px;
+    font-family: 'Chelvor';
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.dialogo p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.perguntas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 20px;
+    border: 1px solid #66d7ff;
+    border-radius: 30px;
+    background: #101c2a;
+    color: white;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #168fc4;
+    box-shadow: 0 0 15px #50caff80;
+    transform: translateY(-3px);
+}
+
+.linha {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4facfe, #ffb199, transparent);
+    margin: 45px 0;
+}
+
+.experimento {
+    text-align: center;
+}
+
+.experimento h2 {
+    font-family: 'Chelvor';
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.experimento p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.prisma-area {
+    margin: 35px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.luz-branca {
+    width: 90px;
+    height: 5px;
+    background: white;
+    box-shadow: 0 0 15px white;
+}
+
+.prisma {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 90px solid rgba(100,210,255,0.35);
+    filter: drop-shadow(0 0 12px #69dfff);
+    transform: rotate(180deg);
+}
+
+.espectro {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 120px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.espectro span {
+    height: 6px;
+    border-radius: 10px;
+}
+
+.espectro.ativo {
+    opacity: 1;
+}
+
+.espectro span:nth-child(1) { background: red; }
+.espectro span:nth-child(2) { background: orange; }
+.espectro span:nth-child(3) { background: yellow; }
+.espectro span:nth-child(4) { background: lime; }
+.espectro span:nth-child(5) { background: cyan; }
+.espectro span:nth-child(6) { background: blue; }
+.espectro span:nth-child(7) { background: violet; }
+
+#resultado {
+    color: #8ceaff;
+    margin-top: 20px;
+    min-height: 30px;
+}
+
+@media(max-width: 800px) {
+    .apresentacao {
+        flex-direction: column;
+    }
+
+    .newton, .texto {
+        width: 100%;
+    }
+
+    .newton img {
+        max-width: 280px;
+    }
+
+    .texto h2 {
+        font-size: 42px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="apresentacao">
+
+    <div class="newton">
+        <img src="isaac2.webp" alt="Retrato de Isaac Newton">
+    </div>
+
+    <div class="texto">
+
+        <h2>Isaac Newton</h2>
+
+        <p>
+            Matemático, físico e astrônomo inglês, Isaac Newton
+            foi um dos principais nomes da história da ciência.
+            Entre suas diversas contribuições, seus estudos sobre
+            a luz transformaram a maneira como compreendemos as cores.
+        </p>
+
+        <div class="dialogo">
+
+            <h3>Isaac Newton diz:</h3>
+
+            <p id="fala">
+                Olá! Sou Isaac Newton. Gostaria de conhecer
+                um pouco sobre minhas descobertas?
+                Selecione uma das perguntas para começarmos.
+            </p>
+
+        </div>
+
+        <div class="perguntas">
+
+            <button onclick="perguntar('historia')">
+                História
+            </button>
+
+            <button onclick="perguntar('experimento')">
+                O experimento
+            </button>
+
+            <button onclick="perguntar('descoberta')">
+                Descoberta
+            </button>
+
+            <button onclick="perguntar('importancia')">
+                Importância
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="linha"></div>
+
+<section class="experimento">
+
+    <h2>O experimento do prisma</h2>
+
+    <p>
+        Em 1666, realizei experimentos utilizando um prisma de vidro
+        para estudar o comportamento da luz solar.
+        Quer observar o que acontece?
+    </p>
+
+    <div class="prisma-area">
+
+        <div class="luz-branca"></div>
+
+        <div class="prisma"></div>
+
+        <div class="espectro" id="espectro">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <button onclick="realizarExperimento()">
+        REALIZAR EXPERIMENTO
+    </button>
+
+    <p id="resultado">
+        Aguardando experimento...
+    </p>
+
+</section>
+
+</div>
+
+<script>
+
+function perguntar(tipo) {
+
+    const fala = document.getElementById("fala");
+
+    const respostas = {
+
+        historia:
+        "Nasci em 1643, na Inglaterra. Desde jovem, desenvolvi interesse pela matemática e pela natureza. Ao longo da minha vida, dediquei-me a compreender os fenômenos do universo.",
+
+        experimento:
+        "Em 1666, durante meus estudos sobre a luz, utilizei um prisma de vidro para observar como a luz solar se comportava ao atravessá-lo. Foi uma experiência fundamental para minhas pesquisas.",
+
+        descoberta:
+        "Demonstrei que a luz branca é composta por diferentes cores. Quando atravessa um prisma, ela se separa em uma faixa de cores: vermelho, laranja, amarelo, verde, azul, anil e violeta.",
+
+        importancia:
+        "Meus estudos ajudaram a transformar a compreensão científica sobre a luz e as cores, contribuindo para o desenvolvimento da óptica e de diversas pesquisas posteriores."
+    };
+
+    fala.textContent = respostas[tipo];
+
+}
+
+function realizarExperimento() {
+
+    const espectro = document.getElementById("espectro");
+    const resultado = document.getElementById("resultado");
+
+    espectro.classList.remove("ativo");
+
+    resultado.textContent = "Analisando a luz branca...";
+
+    setTimeout(() => {
+
+        espectro.classList.add("ativo");
+
+        resultado.textContent =
+        "Experimento concluído! A luz branca foi separada em diferentes cores.";
+
+    }, 500);
+
+}
+
+</script>
+
+</body>
+</html>

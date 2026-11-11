@@ -1,0 +1,246 @@
+
+@font-face {
+    font-family: 'Chelvor';
+    src: url('Chelvor-Regular-Exfont8541.otf');
+}
+
+body {
+    background-image: url('fundofisica.jpg');
+    background-size: cover;
+}
+
+.tecnologia {
+    width: 85%;
+    margin: 100px auto;
+    padding: 45px 40px;
+
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(4, 9, 30, 0.88),
+            rgba(10, 13, 38, 0.78),
+            rgba(5, 8, 25, 0.88)
+        );
+
+    backdrop-filter: blur(15px);
+    color: white;
+
+    box-shadow: 0 0 35px rgba(55, 100, 255, 0.12);
+}
+
+.tec-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 15px 15px 35px;
+}
+
+.tec-topo > div {
+    flex: 1;
+}
+
+.tec-topo img {
+    width: 32%;
+    max-width: 300px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.tec-legenda {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #b9b0df;
+    margin-bottom: 18px;
+}
+
+.tec-topo h1 {
+    font-family: 'Chelvor', serif;
+    font-size: 55px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.tec-intro {
+    font-family: 'Chelvor', serif;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #ddd9e8;
+    max-width: 680px;
+}
+
+.tec-divisoria {
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    margin: 10px 15px 25px;
+}
+
+.tec-indicadores {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.tec-indicadores span {
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    padding: 10px 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    color: #e1deeb;
+    background: rgba(255,255,255,0.06);
+}
+
+.tec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.tec-card {
+    position: relative;
+    min-height: 240px;
+    padding: 30px;
+
+    border: 1px solid rgba(160,180,255,0.35);
+    border-radius: 20px;
+
+    background: rgba(4, 9, 29, 0.78);
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+.tec-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(210,200,255,0.8);
+    background: rgba(15, 20, 48, 0.9);
+}
+
+.tec-numero {
+    font-family: 'Chelvor', serif;
+    font-size: 38px;
+    color: rgba(190,180,230,0.35);
+
+    position: absolute;
+    right: 25px;
+    top: 15px;
+}
+
+.tec-detalhe {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #b7a7df;
+    margin-bottom: 15px;
+}
+
+.tec-card h2 {
+    font-family: 'Chelvor', serif;
+    font-size: 34px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.tec-card p {
+    font-family: 'Chelvor', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d2cfdf;
+    max-width: 480px;
+}
+
+.tec-linha {
+    width: 65px;
+    height: 2px;
+    margin-top: 22px;
+    border-radius: 10px;
+}
+
+.tec-azul {
+    background: #58aaff;
+    box-shadow: 0 0 12px #58aaff;
+}
+
+.tec-vermelho {
+    background: #e85c80;
+    box-shadow: 0 0 12px #e85c80;
+}
+
+.tec-violeta {
+    background: #a47bff;
+    box-shadow: 0 0 12px #a47bff;
+}
+
+.tec-verde {
+    background: #6ed9b0;
+    box-shadow: 0 0 12px #6ed9b0;
+}
+
+.tec-conclusao {
+    margin-top: 40px;
+    padding: 35px 20px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+.tec-conclusao h2 {
+    font-family: 'Chelvor', serif;
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.tec-conclusao p:last-child {
+    max-width: 700px;
+    margin: auto;
+
+    font-family: 'Chelvor', serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d2cfdf;
+}
+
+@media (max-width: 750px) {
+    .tecnologia {
+        width: 94%;
+        padding: 25px 18px;
+    }
+
+    .tec-topo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tec-topo img {
+        width: 100%;
+    }
+
+    .tec-topo h1 {
+        font-size: 42px;
+    }
+
+    .tec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tec-indicadores {
+        justify-content: flex-start;
+    }
+
+    .tec-conclusao h2 {
+        font-size: 30px;
+    }
+}
