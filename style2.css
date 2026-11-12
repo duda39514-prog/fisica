@@ -30,24 +30,6 @@ body {
   text-align: center;           
 }
 
-.oque h1 {
-  margin-bottom: 25px;
-  font-family: 'Chelvor', serif; 
-  letter-spacing: 2px;
-}
-
-.oque p {
-  font-family: 'Chelvor', serif; 
-  font-size: 20px;             
-  line-height: 1.6;
-  margin-bottom: 25px;
-  opacity: 0.9;
-}
-
-.imagem-container {
-  margin-top: 30px;
-}
-
 .espec {
   width: 100%;
   max-width: 500px;             
