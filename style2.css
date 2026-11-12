@@ -17,8 +17,8 @@ body {
     font
 }
 
-.oque {           
-  margin: 40px auto;            
+.oque {
+  margin: auto 80px;
   background-image: url('fundo7.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,8 +26,7 @@ body {
   border: 2px solid white;
   color: white;
   border-radius: 30px;
-  padding: 40px;                
-  text-align: center;           
+  padding: 20px;
 }
 
 .espec {
