@@ -10,10 +10,11 @@ font-family:'Chelvor';
 }
 
 body {
+    font-family: 'Chelvor', serif; 
     background-image: url('Aurora\ Iridescente\ em\ Fluxo.png');
     background-size: 100%;
     background-size: cover;
-    
+    font
 }
 
 .oque {
