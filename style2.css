@@ -17,22 +17,6 @@ body {
     font
 }
 
-.oque {
-  margin: 80px;
-  background-image: url('fundo7.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border: 2px solid white;
-  color: white;
-  border-radius: 30px;
-  padding: 20px;
-}
-
-.espec {
-  border-radius: 30px;
-}
-
 .cima {
     max-width: 1200px;
     background-color: rgb(0,0,0,0.6);
