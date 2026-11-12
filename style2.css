@@ -17,8 +17,8 @@ body {
 }
 
 .oque {
-  max-width: 900px;             /* Mantém uma largura consistente e elegante */
-  margin: 40px auto;            /* Centraliza a caixa na página e dá espaçamento */
+  max-width: 900px;             
+  margin: 40px auto;            
   background-image: url('fundo7.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,18 +26,19 @@ body {
   border: 2px solid white;
   color: white;
   border-radius: 30px;
-  padding: 40px;                /* Aumentei um pouco para respirar melhor por dentro */
-  text-align: center;           /* Centraliza automaticamente todos os textos e imagens dentro do bloco */
+  padding: 40px;                
+  text-align: center;           
 }
 
 .oque h1 {
   margin-bottom: 25px;
-  font-family: 'Cinzel', serif; /* Mantém a consistência da fonte se estiveres a usar */
+  font-family: 'Chelvor', serif; 
   letter-spacing: 2px;
 }
 
 .oque p {
-  font-size: 20px;              /* Ajustado ligeiramente para melhor legibilidade */
+     font-family: 'Chelvor', serif; 
+  font-size: 20px;             
   line-height: 1.6;
   margin-bottom: 25px;
   opacity: 0.9;
@@ -49,10 +50,10 @@ body {
 
 .espec {
   width: 100%;
-  max-width: 500px;             /* Garante que a imagem não ultrapassa 500px, mas encolhe em telas menores */
+  max-width: 500px;             
   height: auto;
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Um toque subtil de borda glass */
+  border: 1px solid rgba(255, 255, 255, 0.3); 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 .cima {
