@@ -31,13 +31,9 @@ body {
 }
 
 .espec {
-  width: 100%;
-  max-width: 500px;             
-  height: auto;
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.3); 
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
+
 .cima {
     max-width: 1200px;
     background-color: rgb(0,0,0,0.6);
