@@ -14,7 +14,6 @@ body {
     background-image: url('Aurora\ Iridescente\ em\ Fluxo.png');
     background-size: 100%;
     background-size: cover;
-    font
 }
 
 .cima {
@@ -26,7 +25,7 @@ body {
     border-radius: 20px;
     display: flex;
     gap: 400px;
-     align-items: center;
+    align-items: center;
 }
 
 nav ul {
@@ -69,6 +68,21 @@ nav ul li a:hover {
     border-radius: 40px;
 }
 
+.part2 {
+  align-items: center;
+    gap: 20px;
+    display: flex;
+    max-width: 1200px;
+    background-color: rgba(0,0,0,0.7);
+    margin: 60px auto;
+    padding: 45px;
+    border: 1px solid white;
+    border-radius: 40px;
+}
+
+.cansei {
+  border-radius: 20px;
+}
 
 .conteudo {
     display: flex;
@@ -107,36 +121,62 @@ nav ul li a:hover {
     margin: 0 0 20px 0; /* Dá um respiro entre os parágrafos */
 }
 
-.botao-borda {      
+
+.botao-borda {
     display: inline-block;
-    background-color: #121518;
-    color: #ffffff;
-    font-family: 'Times New Roman', Times, serif;
+    padding: 13px 38px;
+
+    background: linear-gradient(
+        110deg,
+        #a9a3b9 0%,
+        #f5eafa 18%,
+        #b9f1f0 35%,
+        #fff5df 52%,
+        #c8b8e8 70%,
+        #d9faff 85%,
+        #b5a5c5 100%
+    );
+
+    color: #171923;
+    font-family: 'Times New Roman', serif;
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
-    padding: 14px 36px;
-    border-radius: 50px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    white-space: nowrap;
 
-    background-image: linear-gradient(#121518, #121518), 
-                      linear-gradient(135deg, #00f2fe, #4facfe, #ff0844, #ffb199, rgb(255, 241, 164));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    
-    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4), 
-                0 0 30px rgba(255, 8, 68, 0.2);
-    
-    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 8px;
+
+    box-shadow:
+        inset 1px 1px 4px rgba(255,255,255,0.9),
+        inset -2px -2px 5px rgba(80,70,110,0.2),
+        0 3px 12px rgba(0,0,0,0.3);
+
+    cursor: pointer;
+    transition: 0.35s ease;
 }
 
 .botao-borda:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgb(175, 218, 255), 
-                0 0 45px rgba(255, 8, 68, 0.4);
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        110deg,
+        #e8dafa,
+        #c3ffff,
+        #fff0d1,
+        #e8c9ff,
+        #d4ffff
+    );
+
+    box-shadow:
+        0 0 12px rgba(205,230,255,0.7),
+        0 0 25px rgba(225,190,255,0.4),
+        inset 0 0 8px white;
 }
+
+.botao-borda:active {
+    transform: scale(0.96);
+}
+
 .conteudo img {
     width: 420px;
     height: auto;
